@@ -18,7 +18,7 @@ $ npm install
 GET|`http://localhost:5000/`|JSON data format
 
 ```{
-    "starship":
+"starship":
     {
     "name":"Death Star",
     "classs":"Deep Space Mobile Battlestation",
