@@ -17,6 +17,14 @@ $ npm install
 
 GET|`http://localhost:5000/`|JSON data format
 
-```{"starship":{"name":"Death Star","classs":"Deep Space Mobile Battlestation","model":"DS-1 Orbital Battle Station"},"crew":"342,953","isLeiaOnPlanet":true}
-
+```{
+    "starship":
+    {
+    "name":"Death Star",
+    "classs":"Deep Space Mobile Battlestation",
+    "model":"DS-1 Orbital Battle Station"
+    },
+"crew":"342,953",
+"isLeiaOnPlanet":true
+}
 ```
