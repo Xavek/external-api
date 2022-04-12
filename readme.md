@@ -4,6 +4,7 @@
 
 - Node.js v14.x
 - NPM
+- Docker and Docker-Compose
 
 ### Installation
 
@@ -11,13 +12,15 @@
 $ git clone git@github.com: gautam2002/external-api.git
 $ cd external-api
 $ npm install
+$ docker-compose -f docker-compose.dev.yml up
 ```
 
 ### Endpoints
 
 GET|`http://localhost:5000/`|JSON data format
 
-```{
+```
+{
 "starship":
     {
     "name":"Death Star",
