@@ -1,4 +1,4 @@
-# This is the Simple external API call project.
+## This is the Simple external API call project.
 
 ### Pre-requisites
 
