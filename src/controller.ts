@@ -1,6 +1,7 @@
 import { FilterStarshipData } from "./apiDataFilter";
 import { apiDetails } from "./apiDetails";
 import { AttackDetails } from "./apiDataFilter";
+import { logger } from "./logger";
 
 export class HandleData{
     
@@ -12,8 +13,11 @@ export class HandleData{
          * Catching the Promise<object> directly from API details 
          */
         const apiResponse:object = await apiDetails.starshipAllDetails(this.starshipsURL)
+      
         const peopleApiResponse = await apiDetails.peopleAllData(this.peopleURL)
+
         const {homeworld} = peopleApiResponse
+
         const filterData = new FilterStarshipData(apiResponse,homeworld === this.planetURL)
         /**
          * New Instance of apiDataFilter with providing the Promise<object> comming from apiDetails 
@@ -24,6 +28,7 @@ export class HandleData{
          * Getting the Data from the filterData
          */
         const requiredData = filterData.getAttackDetails()
+        logger.info({msg:"Fetched the Required Data", requiredData})
      
         return requiredData
 

@@ -1,6 +1,7 @@
 
 import express, { Application, Request, Response } from "express";
 import { HandleData } from "./controller";
+import { logger } from "./logger";
 
 
 
@@ -35,7 +36,8 @@ const getData = new HandleData(StarshipURL, PeopleURL,PlanetURL)
  */
 
 app.get("/", async(req:Request ,res:Response )=>{
-    const responseData = await getData.getResponseFromStarshipURL()
+    logger.info({msg:"Request to home route"})
+    const responseData = await getData.getResponseFromStarshipURL()    
     res.json(responseData)
 })
 

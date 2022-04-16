@@ -1,3 +1,5 @@
+import { logger } from "./logger";
+
 export interface Starship{
     name:string;
     classs:string;
@@ -19,6 +21,7 @@ export class FilterStarshipData{
     isLeiaOnPlanet :boolean;
     /**
      * @param apiResponse : response from the API <data> from Controller.
+     *
      */
     constructor(apiResponse:any, homeWorld:boolean){
         this.name = apiResponse.name
@@ -49,6 +52,7 @@ export class FilterStarshipData{
      
             
         } 
+        logger.info({msg:"Filtered the Required Data", fullAttackDetails})
         return fullAttackDetails
     }
     
